@@ -1,13 +1,114 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%% \begin{Simple LaTeX CV Template Class} %%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+% \iffalse meta-comment
+%
+% Copyright (C) 2015 by Ben Lavery
+% -----------------------------------
+%
+% This file may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.2 
+% of this license or (at your option) any later version.
+% The latest version of this license is in:
+%
+% http://www.latex-project.org/lppl.txt
+%
+% and version 1.2 or later is part of all distributions of LaTeX
+% version 1999/12/01 or later.
+%
+% \fi
+%
+% \iffalse
+%<*driver>
+\ProvidesFile{bil-CV.dtx}
+%</driver> %<class>\NeedsTeXFormat{LaTeX2e}[1999/12/01] 
+%<class>\ProvidesClass{bil-CV}
+%<*class>
+[2015/04/01 v1.0 CV template] %</class>
+%
+%<*driver>
+\documentclass{ltxdoc}
+\EnableCrossrefs
+\CodelineIndex
+\RecordChanges
+\usepackage{datetime}
+\begin{document}
+\DocInput{bil-CV.dtx} \end{document}
+%</driver>
+% \fi
+%
+% \CheckSum{0}
+%
+% \CharacterTable
+%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%   Digits        \0\1\2\3\4\5\6\7\8\9
+%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%   Dollar        \$     Percent       \%     Ampersand     \&
+%   Acute accent  \'     Left paren    \(     Right paren   \)
+%   Asterisk      \*     Plus          \+     Comma         \,
+%   Minus         \-     Point         \.     Solidus       \/
+%   Colon         \:     Semicolon     \;     Less than     \<
+%   Equals        \=     Greater than  \>     Question mark \?
+%   Commercial at \@     Left bracket  \[     Backslash     \\
+%   Right bracket \]     Circumflex    \^     Underscore    \_
+%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%   Right brace   \}     Tilde         \~}
+%
+%
+% \changes{v1.0}{2015/04/01}{Initial version}
+%
+% \GetFileInfo{bil-CV.dtx}
+\DoNotIndex{\',\.,\@M,\@@input,\@Alph,\@alph,\@addtoreset,\@arabic}
+\DoNotIndex{\@badmath,\@centercr,\@cite}
+\DoNotIndex{\@dotsep,\@empty,\@float,\@gobble,\@gobbletwo,\@ignoretrue}
+\DoNotIndex{\@input,\@ixpt,\@m,\@minus,\@mkboth}
+\DoNotIndex{\@ne,\@nil,\@nomath,\@plus,\roman,\@set@topoint}
+\DoNotIndex{\@tempboxa,\@tempcnta,\@tempdima,\@tempdimb}
+\DoNotIndex{\@tempswafalse,\@tempswatrue,\@viipt,\@viiipt,\@vipt}
+\DoNotIndex{\@vpt,\@warning,\@xiipt,\@xipt,\@xivpt,\@xpt,\@xviipt}
+\DoNotIndex{\@xxpt,\@xxvpt,\\,\ ,\addpenalty,\addtolength,\addvspace}
+\DoNotIndex{\advance,\ast,\begin,\begingroup,\bfseries,\bgroup,\box}
+\DoNotIndex{\bullet}
+\DoNotIndex{\cdot,\cite,\CodelineIndex,\cr,\day,\DeclareOption}
+\DoNotIndex{\def,\DisableCrossrefs,\divide,\DocInput,\documentclass}
+\DoNotIndex{\DoNotIndex,\egroup,\ifdim,\else,\fi,\em,\endtrivlist}
+\DoNotIndex{\EnableCrossrefs,\end,\end@dblfloat,\end@float,\endgroup}
+\DoNotIndex{\endlist,\everycr,\everypar,\ExecuteOptions,\expandafter}
+\DoNotIndex{\fbox}
+\DoNotIndex{\filedate,\filename,\fileversion,\fontsize,\framebox,\gdef}
+\DoNotIndex{\global,\halign,\hangindent,\hbox,\hfil,\hfill,\hrule}
+\DoNotIndex{\hsize,\hskip,\hspace,\hss,\if@tempswa,\ifcase,\or,\fi,\fi}
+\DoNotIndex{\ifhmode,\ifvmode,\ifnum,\iftrue,\ifx,\fi,\fi,\fi,\fi,\fi}
+\DoNotIndex{\input}
+\DoNotIndex{\jobname,\kern,\leavevmode,\let,\leftmark}
+\DoNotIndex{\list,\llap,\long,\m@ne,\m@th,\mark,\markboth,\markright}
+\DoNotIndex{\month,\newcommand,\newcounter,\newenvironment}
+\DoNotIndex{\NeedsTeXFormat,\newdimen}
+\DoNotIndex{\newlength,\newpage,\nobreak,\noindent,\null,\number}
+\DoNotIndex{\numberline,\OldMakeindex,\OnlyDescription,\p@}
+\DoNotIndex{\pagestyle,\par,\paragraph,\paragraphmark,\parfillskip}
+\DoNotIndex{\penalty,\PrintChanges,\PrintIndex,\ProcessOptions}
+\DoNotIndex{\protect,\ProvidesClass,\raggedbottom,\raggedright}
+\DoNotIndex{\refstepcounter,\relax,\renewcommand}
+\DoNotIndex{\rightmargin,\rightmark,\rightskip,\rlap,\rmfamily}
+\DoNotIndex{\secdef,\selectfont,\setbox,\setcounter,\setlength}
+\DoNotIndex{\settowidth,\sfcode,\skip,\sloppy,\slshape,\space}
+\DoNotIndex{\symbol,\the,\trivlist,\typeout,\tw@,\undefined,\uppercase}
+\DoNotIndex{\usecounter,\usefont,\usepackage,\vfil,\vfill,\viiipt}
+\DoNotIndex{\viipt,\vipt,\vskip,\vspace}
+\DoNotIndex{\wd,\xiipt,\year,\z@}
+%
+% \title{The bil-CV class\thanks{This document
+%    corresponds to bil-CV~\fileversion 
+%    dated \filedate.}}
+%  \author{Ben Lavery \\ \texttt{ben.lavery@hashbang0.com}}
+%
+% \maketitle
+% \tableofcontents
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Authors & Credits:                                                 %%
 %%                                                                    %%
 %% After years of using this CV I have lost where I sourced it from,  %%
 %% which I feel awful about.  It was created as a document with       %%
-%% ‘editable fields’ and not as a class.  All I have done is made it  %%
+%% ?editable fields? and not as a class.  All I have done is made it  %%
 %% into a class for convenience, though a number of my own            %%
 %% customisations have been entwined with the original over the       %%
 %% years.                                                             %%
@@ -35,13 +136,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%% Class Particulars %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Loads a “base class” which we can modify.
+% Loads a ?base class? which we can modify.
 \LoadClass{article}%
 \ProcessOptions%
 
 % Class requirements and description
 \NeedsTeXFormat{LaTeX2e}%
-\ProvidesClass{bil-CV}[2015/03/22 Ben Lavery’s CV Class]%
+\ProvidesClass{bil-CV}[2015/03/22 Ben Lavery?s CV Class]%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -57,13 +158,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%% Class Particulars %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Loads a “base class” which we can modify.
+% Loads a ?base class? which we can modify.
 \LoadClass{article}%
 \ProcessOptions%
 
 % Class requirements and description
 \NeedsTeXFormat{LaTeX2e}%
-\ProvidesClass{bil-CV}[2015/03/22 Ben Lavery’s CV Class]%
+\ProvidesClass{bil-CV}[2015/03/22 Ben Lavery?s CV Class]%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -91,7 +192,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Lengths %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Half of the page width, useful for ‘false columns’
+% Half of the page width, useful for ?false columns?
 \newlength{\halfpage}%
 \setlength{\halfpage}{(\textwidth+\marginparwidth+\marginparsep)/2}%
 
@@ -153,7 +254,7 @@
 	\pagebreak[2]%
 }%
 
-% Adds a short line between ‘subsections’
+% Adds a short line between ?subsections?
 \newcommand{\subsectionrule}{%
 	\rule{300px}{0.5px}%
 	\vspace{1mm}%
@@ -165,7 +266,7 @@
 	#1\thinspace--\thinspace#2%
 }%
 
-% Add contact information in a ‘nice’ way
+% Add contact information in a ?nice? way
 \newcommand{\contactdetails}[8]{%
 	\begin{minipage}[t]{\halfpage}%
 		#4\\%
@@ -181,20 +282,20 @@
 	\end{minipage}%
 }%
 
-% Add the ‘head’ section for education/work places
+% Add the ?head? section for education/work places
 \newcommand{\placementheader}[4]{%
 		\textbf{#1}, {\daterange{#2}{#3}}\\%
 		#4%
 }%
 
-% Add the ‘head’ section for education/work places
+% Add the ?head? section for education/work places
 \newcommand{\placementheaderonedate}[3]{%
 		\textbf{#1}, {#2}\\%
 		#3%
 }%
 
 % Use a normal itemised list, but compact the space between bullets to
-% ‘normal’ line spacing.
+% ?normal? line spacing.
 \newenvironment{compactlist}{%
 	\vspace{-2mm}%
 	\begin{itemize}%
@@ -208,7 +309,7 @@
 }%
 
 % Use a normal itemised list, but compact the space between bullets to
-% ‘normal’ line spacing.  Use this INSIDE other compact lists.
+% ?normal? line spacing.  Use this INSIDE other compact lists.
 \newenvironment{innercompactlist}{%
 	\vspace{-1mm}%
 	\begin{itemize}%
