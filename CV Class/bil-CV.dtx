@@ -19,9 +19,8 @@
 %<*driver>
 \ProvidesFile{bil-CV.dtx}
 %</driver> %<class>\NeedsTeXFormat{LaTeX2e}[1999/12/01] 
-%<class>\ProvidesClass{bil-CV}
+%<class>\ProvidesClass{bil-CV}[2015/04/23 v1.1 CV template]
 %<*class>
-[2015/04/01 v1.0 CV template] %</class>
 %
 %<*driver>
 \documentclass{ltxdoc}
@@ -65,47 +64,49 @@
 %
 %
 % \changes{v1.0}{2015/04/01}{Initial version}
+% \changes{v1.1}{2015/04/23}{Updated to 'just work'}
 %
 % \GetFileInfo{bil-CV.dtx}
-\DoNotIndex{\',\.,\@M,\@@input,\@Alph,\@alph,\@addtoreset,\@arabic}
-\DoNotIndex{\@badmath,\@centercr,\@cite}
-\DoNotIndex{\@dotsep,\@empty,\@float,\@gobble,\@gobbletwo,\@ignoretrue}
-\DoNotIndex{\@input,\@ixpt,\@m,\@minus,\@mkboth}
-\DoNotIndex{\@ne,\@nil,\@nomath,\@plus,\roman,\@set@topoint}
-\DoNotIndex{\@tempboxa,\@tempcnta,\@tempdima,\@tempdimb}
-\DoNotIndex{\@tempswafalse,\@tempswatrue,\@viipt,\@viiipt,\@vipt}
-\DoNotIndex{\@vpt,\@warning,\@xiipt,\@xipt,\@xivpt,\@xpt,\@xviipt}
-\DoNotIndex{\@xxpt,\@xxvpt,\\,\ ,\addpenalty,\addtolength,\addvspace}
-\DoNotIndex{\advance,\ast,\begin,\begingroup,\bfseries,\bgroup,\box}
-\DoNotIndex{\bullet}
-\DoNotIndex{\cdot,\cite,\CodelineIndex,\cr,\day,\DeclareOption}
-\DoNotIndex{\def,\DisableCrossrefs,\divide,\DocInput,\documentclass}
-\DoNotIndex{\DoNotIndex,\egroup,\ifdim,\else,\fi,\em,\endtrivlist}
-\DoNotIndex{\EnableCrossrefs,\end,\end@dblfloat,\end@float,\endgroup}
-\DoNotIndex{\endlist,\everycr,\everypar,\ExecuteOptions,\expandafter}
-\DoNotIndex{\fbox}
-\DoNotIndex{\filedate,\filename,\fileversion,\fontsize,\framebox,\gdef}
-\DoNotIndex{\global,\halign,\hangindent,\hbox,\hfil,\hfill,\hrule}
-\DoNotIndex{\hsize,\hskip,\hspace,\hss,\if@tempswa,\ifcase,\or,\fi,\fi}
-\DoNotIndex{\ifhmode,\ifvmode,\ifnum,\iftrue,\ifx,\fi,\fi,\fi,\fi,\fi}
-\DoNotIndex{\input}
-\DoNotIndex{\jobname,\kern,\leavevmode,\let,\leftmark}
-\DoNotIndex{\list,\llap,\long,\m@ne,\m@th,\mark,\markboth,\markright}
-\DoNotIndex{\month,\newcommand,\newcounter,\newenvironment}
-\DoNotIndex{\NeedsTeXFormat,\newdimen}
-\DoNotIndex{\newlength,\newpage,\nobreak,\noindent,\null,\number}
-\DoNotIndex{\numberline,\OldMakeindex,\OnlyDescription,\p@}
-\DoNotIndex{\pagestyle,\par,\paragraph,\paragraphmark,\parfillskip}
-\DoNotIndex{\penalty,\PrintChanges,\PrintIndex,\ProcessOptions}
-\DoNotIndex{\protect,\ProvidesClass,\raggedbottom,\raggedright}
-\DoNotIndex{\refstepcounter,\relax,\renewcommand}
-\DoNotIndex{\rightmargin,\rightmark,\rightskip,\rlap,\rmfamily}
-\DoNotIndex{\secdef,\selectfont,\setbox,\setcounter,\setlength}
-\DoNotIndex{\settowidth,\sfcode,\skip,\sloppy,\slshape,\space}
-\DoNotIndex{\symbol,\the,\trivlist,\typeout,\tw@,\undefined,\uppercase}
-\DoNotIndex{\usecounter,\usefont,\usepackage,\vfil,\vfill,\viiipt}
-\DoNotIndex{\viipt,\vipt,\vskip,\vspace}
-\DoNotIndex{\wd,\xiipt,\year,\z@}
+% \DoNotIndex{\',\.,\@M,\@@input,\@Alph,\@alph,\@addtoreset,\@arabic}
+% \DoNotIndex{\@badmath,\@centercr,\@cite}
+% \DoNotIndex{\@dotsep,\@empty,\@float,\@gobble,\@gobbletwo,\@ignoretrue}
+% \DoNotIndex{\@input,\@ixpt,\@m,\@minus,\@mkboth}
+% \DoNotIndex{\@ne,\@nil,\@nomath,\@plus,\roman,\@set@topoint}
+% \DoNotIndex{\@tempboxa,\@tempcnta,\@tempdima,\@tempdimb}
+% \DoNotIndex{\@tempswafalse,\@tempswatrue,\@viipt,\@viiipt,\@vipt}
+% \DoNotIndex{\@vpt,\@warning,\@xiipt,\@xipt,\@xivpt,\@xpt,\@xviipt}
+% \DoNotIndex{\@xxpt,\@xxvpt,\\,\ ,\addpenalty,\addtolength,\addvspace}
+% \DoNotIndex{\advance,\ast,\begin,\begingroup,\bfseries,\bgroup,\box}
+% \DoNotIndex{\bullet}
+% \DoNotIndex{\cdot,\cite,\CodelineIndex,\cr,\day,\DeclareOption}
+% \DoNotIndex{\def,\DisableCrossrefs,\divide,\DocInput,\documentclass}
+% \DoNotIndex{\DoNotIndex,\egroup,\ifdim,\else,\fi,\em,\endtrivlist}
+% \DoNotIndex{\EnableCrossrefs,\end,\end@dblfloat,\end@float,\endgroup}
+% \DoNotIndex{\endlist,\everycr,\everypar,\ExecuteOptions,\expandafter}
+% \DoNotIndex{\fbox}
+% \DoNotIndex{\filedate,\filename,\fileversion,\fontsize,\framebox,\gdef}
+% \DoNotIndex{\global,\halign,\hangindent,\hbox,\hfil,\hfill,\hrule}
+% \DoNotIndex{\hsize,\hskip,\hspace,\hss,\if@tempswa,\ifcase,\or,\fi,\fi}
+% \DoNotIndex{\ifhmode,\ifvmode,\ifnum,\iftrue,\ifx,\fi,\fi,\fi,\fi,\fi}
+% \DoNotIndex{\input}
+% \DoNotIndex{\jobname,\kern,\leavevmode,\let,\leftmark}
+% \DoNotIndex{\list,\llap,\long,\m@ne,\m@th,\mark,\markboth,\markright}
+% \DoNotIndex{\month,\newcommand,\newcounter,\newenvironment}
+% \DoNotIndex{\NeedsTeXFormat,\newdimen}
+% \DoNotIndex{\newlength,\newpage,\nobreak,\noindent,\null,\number}
+% \DoNotIndex{\numberline,\OldMakeindex,\OnlyDescription,\p@}
+% \DoNotIndex{\pagestyle,\par,\paragraph,\paragraphmark,\parfillskip}
+% \DoNotIndex{\penalty,\PrintChanges,\PrintIndex,\ProcessOptions}
+% \DoNotIndex{\protect,\ProvidesClass,\raggedbottom,\raggedright}
+% \DoNotIndex{\refstepcounter,\relax,\renewcommand}
+% \DoNotIndex{\rightmargin,\rightmark,\rightskip,\rlap,\rmfamily}
+% \DoNotIndex{\secdef,\selectfont,\setbox,\setcounter,\setlength}
+% \DoNotIndex{\settowidth,\sfcode,\skip,\sloppy,\slshape,\space}
+% \DoNotIndex{\symbol,\the,\trivlist,\typeout,\tw@,\undefined,\uppercase}
+% \DoNotIndex{\usecounter,\usefont,\usepackage,\vfil,\vfill,\viiipt}
+% \DoNotIndex{\viipt,\vipt,\vskip,\vspace}
+% \DoNotIndex{\wd,\xiipt,\year,\z@}
+
 %
 % \title{The bil-CV class\thanks{This document
 %    corresponds to bil-CV~\fileversion\ 
@@ -141,6 +142,20 @@
 % \end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
+% \section{Class Particulars}
+% Load a `base class' which we can modify.
+%    \begin{macrocode}
+\LoadClass{article}%
+\ProcessOptions%
+%    \end{macrocode}
+%
+%
+% Class requirements and description
+%    \begin{macrocode}
+\NeedsTeXFormat{LaTeX2e}%
+%    \end{macrocode}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 % \section{Class Options}
 % There are a number of options passed to the `parent' class
 % which can control the size of the font.  Only the 10pt size
@@ -150,20 +165,6 @@
 \DeclareOption{11pt}{\PassOptionsToClass{11pt}{article}}%
 \DeclareOption{12pt}{\PassOptionsToClass{12pt}{article}}%
 \ProcessOptions%
-%    \end{macrocode}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% \section{Class Particulars}
-% Load a `base class' which we can modify.
-%    \begin{macrocode}
-\LoadClass{article}
-%    \end{macrocode}
-%
-%
-% Class requirements and description
-%    \begin{macrocode}
-\NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{bil-CV}[2015/03/22 Ben Lavery's CV Class]
 %    \end{macrocode}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -202,6 +203,12 @@
 % \section{Layout}
 %
 % \subsection{Paper}
+% Put the section titles on left side of page
+% Section titles are in the margin
+%    \begin{macrocode}
+\reversemarginpar%
+%    \end{macrocode}
+%
 % Setting up of the paper, margins, etc.  It's important to note that
 % the `headings' created by \texttt{\\section} appear in the marginal
 % note which is always on the left hand side of the page.
@@ -213,12 +220,7 @@
 	margin=12mm,          % margins (all)
 	rmargin=16mm,%
 	includemp,            % Include marginal note in textwidth calculations
-}
-%    \end{macrocode}
-% Put the section titles on left side of page
-% Section titles are in the margin
-%    \begin{macrocode}
-\reversemarginpar%
+}%
 %    \end{macrocode}
 %
 % \subsection{Other Considerations}
@@ -393,4 +395,3 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \Finale
-\endinput
