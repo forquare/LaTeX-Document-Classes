@@ -29,7 +29,7 @@
 %<*driver>
 \ProvidesFile{bil-CV.dtx}
 %</driver> %<class>\NeedsTeXFormat{LaTeX2e}[1999/12/01] 
-%<class>\ProvidesClass{bil-CV}[2015/05/04 v1.3 CV template]
+%<class>\ProvidesClass{bil-CV}[2015/05/04 v1.5 CV template]
 %<*class>
 %
 %<*driver>
@@ -74,10 +74,11 @@
 %
 %
 % \changes{v1.0}{2015/04/01}{Initial version}
-% \changes{v1.1}{2015/04/23}{Updated to 'just work'}
+% \changes{v1.1}{2015/04/23}{Updated to `just work'}
 % \changes{v1.2}{2015/05/04}{Fixed issue where options were defined after class loading}
 % \changes{v1.3}{2015/05/04}{Fixed issue where users using $\backslash$section*\{\} would only print an asterisk}
 % \changes{v1.4}{2015/05/04}{Fixed issue where users using $\backslash$littleblankline wouldn't introduce a new paragraph}
+% \changes{v1.4}{2015/05/05}{Fixed issue where omitting website/phone number/email would result in `empty' fields with the labels printed}
 %
 % \GetFileInfo{bil-CV.dtx}
 % \DoNotIndex{\',\.,\@M,\@@input,\@Alph,\@alph,\@addtoreset,\@arabic}
@@ -203,6 +204,11 @@
 %    \begin{macrocode}
 \RequirePackage{fancyhdr}%
 %    \end{macrocode}
+% To allow for conditionals
+% http://www.ctan.org/pkg/ifthen
+%    \begin{macrocode}
+\RequirePackage{ifthen}%
+%    \end{macrocode}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % \section{Lengths}
@@ -318,12 +324,23 @@
 		#8%
 	\end{minipage}%
 	\begin{minipage}[t]{\halfpage}%
-		\textit{Phone}: #1\\%
-		\textit{E-mail}: \href{#2}{#2}\\%
-		\textit{WWW}: \href{#3}{#3}%
+		\ifthenelse{\not\equal{#1}{}}% Check to see if phone number is given
+			{\textit{Phone}: #1}% Print phone number if given
+			{}% Otherwise ignore
+			
+		\ifthenelse{\not\equal{#2}{}}% Check to see if email is given
+			{\textit{E-mail}: \href{#2}{#2}}% Print email if given
+			{}% Otherwise ignore
+			
+		\ifthenelse{\not\equal{#3}{}}% Check to see if website is given
+			{\textit{WWW}: \href{#3}{#3}}% Print website if given
+			{}% Otherwise ignore
 	\end{minipage}%
 }%
 %    \end{macrocode}
+% If you do not wish to use a particular field, e.g. website, then simply leave it blank.  For example:\\
+% \texttt{$\backslash$contactdetails\{Phone\}\{Email\}\{\}\{House number\}\{Street name\}\{Town\}\{County\}\{Post Code\}}\\
+% This will ensure that \texttt{WWW: } isn't printed and left empty.  It is possible to omit the \textit{phone}, \textit{email}, and \textit{website}.
 %
 % \subsection{placementheader}
 % \label{subsec:placementheader}
