@@ -77,6 +77,7 @@
 % \changes{v1.1}{2015/04/23}{Updated to 'just work'}
 % \changes{v1.2}{2015/05/04}{Fixed issue where options were defined after class loading}
 % \changes{v1.3}{2015/05/04}{Fixed issue where users using $\backslash$section*\{\} would only print an asterisk}
+% \changes{v1.4}{2015/05/04}{Fixed issue where users using $\backslash$littleblankline wouldn't introduce a new paragraph}
 %
 % \GetFileInfo{bil-CV.dtx}
 % \DoNotIndex{\',\.,\@M,\@@input,\@Alph,\@alph,\@addtoreset,\@arabic}
@@ -281,7 +282,7 @@
 %    \begin{macrocode}
 \newcommand{\littleblankline}{%
 	\vspace{1.5mm}%
-	\\%
+	\par%
 	\pagebreak[2]%
 }%
 %    \end{macrocode}
