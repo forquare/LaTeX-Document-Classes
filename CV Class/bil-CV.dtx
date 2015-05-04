@@ -342,6 +342,23 @@
 }%
 %    \end{macrocode}
 %
+% \subsection{bilSection}
+% This is called by \texttt{$\backslash$section which is redefined below.}
+%    \begin{macrocode}
+\newcommand{\bilSection}[2]{%
+		\pagebreak[2]%
+		\vspace{\baselineskip}%
+		\phantomsection%
+		\addcontentsline{toc}{section}{#1}%
+		\hspace{0mm}%
+		\marginpar{%
+			\raggedright%
+			\scshape #1%
+		}#2%
+}%
+%    \end{macrocode}
+%
+%
 % \subsection{compactlist}
 % Use a normal itemised list, but compact the space between bullets to
 % normal line spacing.
@@ -383,16 +400,8 @@
 % Redefine section otherwise the top of the section header will not line up with the top
 % of the section.
 %    \begin{macrocode}
-\renewcommand{\section}[2]{%
-	\pagebreak[2]%
-	\vspace{\baselineskip}%
-	\phantomsection%
-	\addcontentsline{toc}{section}{#1}%
-	\hspace{0mm}%
-	\marginpar{%
-		\raggedright%
-		\scshape #1%
-	}#2%
+\renewcommand{\section}{%
+	\@ifstar{\bilSection}{\bilSection}%
 }%
 %    \end{macrocode}
 %
