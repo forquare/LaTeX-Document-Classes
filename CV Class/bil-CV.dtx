@@ -152,7 +152,19 @@
 % \end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% \section{Class Particulars}
+% \section{Class Options}
+% There are a number of options passed to the `parent' class
+% which can control the size of the font.  Only the 10pt size
+% has been properly tested/
+%    \begin{macrocode}
+\DeclareOption{10pt}{\PassOptionsToClass{10pt}{article}}%
+\DeclareOption{11pt}{\PassOptionsToClass{11pt}{article}}%
+\DeclareOption{12pt}{\PassOptionsToClass{12pt}{article}}%
+\ProcessOptions%
+%    \end{macrocode}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% \section{Class Loading}
 % Load a `base class' which we can modify.
 %    \begin{macrocode}
 \LoadClass{article}%
@@ -163,18 +175,6 @@
 % Class requirements and description
 %    \begin{macrocode}
 \NeedsTeXFormat{LaTeX2e}%
-%    \end{macrocode}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% \section{Class Options}
-% There are a number of options passed to the `parent' class
-% which can control the size of the font.  Only the 10pt size
-% has been properly tested/
-%    \begin{macrocode}
-\DeclareOption{10pt}{\PassOptionsToClass{10pt}{article}}%
-\DeclareOption{11pt}{\PassOptionsToClass{11pt}{article}}%
-\DeclareOption{12pt}{\PassOptionsToClass{12pt}{article}}%
-\ProcessOptions%
 %    \end{macrocode}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
