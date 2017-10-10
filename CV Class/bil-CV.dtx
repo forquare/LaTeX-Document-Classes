@@ -328,11 +328,19 @@
 %    \begin{macrocode}
 \newcommand{\contactdetails}[8]{%
 	\begin{minipage}[t]{\halfpage}%
-		#4\\%
-		#5\\%
-		#6\\%
-		#7\\%
-		#8%
+		#4%
+		\ifthenelse{\not\equal{#5}{}}% Check to see if address field is given
+			\\~#5%
+			{}% Otherwise ignore
+		\ifthenelse{\not\equal{#6}{}}% Check to see if address field is given
+			\\~#6%
+			{}% Otherwise ignore
+		\ifthenelse{\not\equal{#7}{}}% Check to see if address field is given
+			\\~#7%
+			{}% Otherwise ignore
+		\ifthenelse{\not\equal{#8}{}}% Check to see if address field is given
+			\\~#8%
+			{}% Otherwise ignore
 	\end{minipage}%
 	\begin{minipage}[t]{\halfpage}%
 		\ifthenelse{\not\equal{#1}{}}% Check to see if phone number is given
