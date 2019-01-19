@@ -348,7 +348,7 @@
 			{}% Otherwise ignore
 			
 		\ifthenelse{\not\equal{#2}{}}% Check to see if email is given
-			{\textit{E-mail}: \href{#2}{#2}}% Print email if given
+			{\textit{E-mail}: \href{mailto:#2}{#2}}% Print email if given
 			{}% Otherwise ignore
 			
 		\ifthenelse{\not\equal{#3}{}}% Check to see if website is given
