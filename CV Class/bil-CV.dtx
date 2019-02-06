@@ -432,6 +432,24 @@
 }%
 %    \end{macrocode}
 %
+% \subsection{sectioncompactlist}
+% Use a normal itemised list, but compact the space between bullets to
+% normal line spacing.  This has a starts higher up the page to be used in
+% sections where a list if the first contents of the section.
+%    \begin{macrocode}
+\newenvironment{sectioncompactlist}{%
+	\vspace{-7mm}%
+	\begin{itemize}%
+		\setlength{\itemsep}{0pt}%
+		\setlength{\parskip}{0pt}%
+		\setlength{\parsep}{0pt}%
+}{%
+	\end{itemize}%
+	\pagebreak[2]%
+	\vspace{-\baselineskip}%
+}%
+%    \end{macrocode}
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \section{Renew Commands \& Environments}
 %
