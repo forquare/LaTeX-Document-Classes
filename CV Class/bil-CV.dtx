@@ -228,6 +228,12 @@
 \newlength{\halfpage}%
 \setlength{\halfpage}{(\textwidth+\marginparwidth+\marginparsep)/2}%
 %    \end{macrocode}
+%
+% Half of the baselineskip height
+%    \begin{macrocode}
+\newlength{\halfbaselineskip}%
+\setlength{\halfbaselineskip}{(\baselineskip)/2}%
+%    \end{macrocode}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % \section{Layout}
@@ -446,7 +452,7 @@
 }{%
 	\end{itemize}%
 	\pagebreak[2]%
-	\vspace{-\baselineskip}%
+	\vspace{-\halfbaselineskip}%
 }%
 %    \end{macrocode}
 %
