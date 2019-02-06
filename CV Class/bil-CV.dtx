@@ -220,6 +220,11 @@
 %    \begin{macrocode}
 \RequirePackage{ifthen}%
 %    \end{macrocode}
+% To edit list formatting
+% http://www.ctan.org/pkg/enumitem
+%    \begin{macrocode}
+\RequirePackage{enumitem}%
+%    \end{macrocode}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % \section{Lengths}
@@ -445,7 +450,7 @@
 %    \begin{macrocode}
 \newenvironment{sectioncompactlist}{%
 	\vspace{-7mm}%
-	\begin{itemize}%
+	\begin{itemize}[leftmargin=*]%
 		\setlength{\itemsep}{0pt}%
 		\setlength{\parskip}{0pt}%
 		\setlength{\parsep}{0pt}%
